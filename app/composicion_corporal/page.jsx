@@ -13,6 +13,7 @@ export default function Composition() {
   const [gender, setGender] = useState('');
   const [weight, setWeight] = useState('');
   const [height, setHeight] = useState('');
+  const [age, setAge] = useState('');
   const [tricep, setTricep] = useState('');
   const [bicep, setBicep] = useState('');
   const [subscapularis, setSubscapularis] = useState('');
@@ -29,6 +30,7 @@ export default function Composition() {
   const [composition, setComposition] = useState(null); //masa muscular
   const [por_composition, setPor_composition] = useState(null); //porcentaje masa muscualar
   const [error, setError] = useState(false);
+
 
 
   const handleSubmit = (e) => {
@@ -84,8 +86,6 @@ export default function Composition() {
       const muscular_mass = (weight*0.01*muscular_mass_porcentage*100)/100;
       setComposition(muscular_mass);
 
-
-
     } else {
       console.log('Error');
       setResult(null);
@@ -125,7 +125,7 @@ export default function Composition() {
           </select>
         </label>
         <label className={`${lato.className} block mb-1 mt-1`}>
-          weight (Kg):
+          Peso (Kg):
           <input
             type="number"
             className={`${lato_sub.className} border-1 p-1 w-full rounded-md mb-1`}
@@ -134,7 +134,7 @@ export default function Composition() {
           />
         </label>
         <label className={`${lato.className} block mb-1 mt-1`}>
-          height (cm):
+          Altura/Talla (cm):
           <input
             type="number"
             className={`${lato_sub.className} border-1 p-1 w-full rounded-md mb-1`}
@@ -144,7 +144,12 @@ export default function Composition() {
         </label>
         <label className={`${lato.className} block mb-1 mt-1`}>
           Edad (Años):
-          <input type="text" className={`${lato_sub.className} border-1 p-1 w-full rounded-md mb-1`} />
+          <input
+            type="number"
+            className={`${lato_sub.className} border-1 p-1 w-full rounded-md mb-1`}
+            value={age}
+            onChange={(e) => handlePositiveInputChange(parseFloat(e.target.value), setAge)}
+          />
         </label>
         <label className={`${lato.className} block mb-1 mt-1`}>
           Bíceps (mm):
@@ -165,7 +170,7 @@ export default function Composition() {
           />
         </label>
         <label className={`${lato.className} block mb-1 mt-1`}>
-          subscapularis (mm):
+          Subescapular (mm):
           <input
             type="number"
             className={`${lato_sub.className} border-1 p-1 w-full rounded-md mb-1`}
@@ -183,7 +188,7 @@ export default function Composition() {
           />
         </label>
         <label className={`${lato.className} block mb-1 mt-1`}>
-          bistyloid (cm):
+          Biestiloideo (cm):
           <input
             type="number"
             className={`${lato_sub.className} border-1 p-1 w-full rounded-md mb-1`}
@@ -202,10 +207,31 @@ export default function Composition() {
         </label>
         <button
           type="submit"
-          className="bg-primary w-full p-2 mt-2 rounded-md col-start-2 col-span-2
+          className="bg-primary w-full p-2 mt-2 rounded-md col-start-1 col-span-2
           uppercase hover:bg-terciary cursor-pointer"
         >
           Calcular
+        </button>
+        <button
+          type="button"
+          className="bg-primary w-full p-2 mt-2 rounded-md col-start-4 col-span-2
+          uppercase hover:bg-terciary cursor-pointer"
+          onClick={() => {
+            localStorage.removeItem("bodyCompositionValues");
+            setGender("");
+            setTricep("");
+            setBicep("");
+            setSubscapularis("");
+            setSuprailiac("");
+            setBistyloid("");
+            setFemur("");
+            setHeight("");
+            setWeight("");
+            setAge("");
+            setResult(null);
+          }}
+        >
+          Limpiar Campos
         </button>
       </form>
 
