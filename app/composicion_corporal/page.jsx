@@ -3,6 +3,7 @@ import { Kanit, Lato } from 'next/font/google'
 import React, { useState } from "react";
 import Table from '../table/page';
 import PieChart from '@/components/PieChart';
+import BarChart from '@/components/BarChart';
 
 const kanit = Kanit({ subsets: ['latin'], weight: ["600"], style: ["normal"] });
 const lato = Lato({subsets: ['latin'], weight: ["900"], style: ["normal"] });
@@ -236,7 +237,7 @@ export default function Composition() {
       </form>
 
       {result !== null && (
-        <div>
+      <div>
         <Table
         result={result}
         result_kg={result_kg}
@@ -247,17 +248,21 @@ export default function Composition() {
         composition={composition}
         por_composition={por_composition}
         />
-        <PieChart
-        result={result}
-        result_kg={result_kg}
-        bone_mass={bone_mass}
-        por_bone_mass={por_bone_mass}
-        residual_mass={residual_mass}
-        por_residual_mass={por_residual_mass}
-        composition={composition}
-        por_composition={por_composition}
-        />
+        <div className="w-[1100px] h-screen flex gap-5 mx-auto my-auto">
+          <PieChart
+          result={result}
+          por_bone_mass={por_bone_mass}
+          por_residual_mass={por_residual_mass}
+          por_composition={por_composition}
+          />
+          <BarChart
+          result_kg={result_kg}
+          bone_mass={bone_mass}
+          residual_mass={residual_mass}
+          composition={composition}
+          />
         </div>
+      </div>
         
       )}
       </div>
