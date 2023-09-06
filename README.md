@@ -3,12 +3,21 @@
 Este es un proyecto [Next.js](https://nextjs.org/) creado usando el comando [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 La finalidad del proyecto es aprender a manejar el Framework Next.js, y como integrarle otras dependencias.
 
-## Dependencias que posee
+## Como clonar el proyecto
 
-El proyecto tiene las siguientes dependendencias:
+Para clonar el repositorio del proyecto a tu computadora debes usar el comando:
 
-- [Tailwind CSS](https://tailwindcss.com/) - Para estilos CSS
-- [Chart.js](https://www.chartjs.org/) - Para añadir y manejar Graficas
+```bash or cmd
+git clone https://github.com/AndreCaze/Proyecto_Next_js.git
+```
+
+## Como instalar el proyecto
+
+Para instalar el proyecto utiliza:
+
+```bash or cmd
+npm install
+```
 
 ## Como Iniciar el Programa
 
@@ -22,9 +31,24 @@ yarn dev
 pnpm dev
 ```
 
-Abrir [http://localhost:3000](http://localhost:3000) con algun navegador web.
+Abrir [http://localhost:3000](http://localhost:3000) con algun navegador web, o ir a la [Pagina desplegada con Vercel](https://proyecto-next-js-bay.vercel.app/) para que se den una idea de que esperar.
 
-Para realizar cambios al proyecto ocupa entrar a la carpeta `app`. Adentro estan los archivos de paginas y componentes
+Para realizar cambios al proyecto ocupa entrar a la carpeta `app`. Adentro estan los archivos de paginas y componentes.
+
+## Que contiene el Proyecto
+
+El proyecto contiene una Barra de Menu Lateral donde puedes navergar entre las 3 paginas:
+
+- Home - La pagina principal en donde se despliega siempre que se abre.
+- Composicion Corporal - Un Formulario Calculador de varias masas musculares que de despliega una tabla y graficas en base a los datos introducidos.
+- About - Una pagina de Acerca De, donde pueden conocer mas sobre el creador del Proyecto
+
+## Dependencias que posee
+
+El proyecto tiene las siguientes dependendencias:
+
+- [Tailwind CSS](https://tailwindcss.com/) - Para estilos CSS
+- [Chart.js](https://www.chartjs.org/) - Para añadir y manejar Graficas
 
 ## Aprenda Mas
 
