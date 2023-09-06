@@ -7,7 +7,7 @@ La finalidad del proyecto es aprender a manejar el Framework Next.js, y como int
 
 El proyecto tiene las siguientes dependendencias:
 
-- [TailWind CSS](https://tailwindcss.com/) - Para estilos CSS
+- [Tailwind CSS](https://tailwindcss.com/) - Para estilos CSS
 - [Chart.js](https://www.chartjs.org/) - Para añadir y manejar Graficas
 
 ## Como Iniciar el Programa
