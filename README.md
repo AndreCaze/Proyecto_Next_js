@@ -1,8 +1,18 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Proyecto Desarrollo Web 2 Primer Parcial
 
-## Getting Started
+Este es un proyecto [Next.js](https://nextjs.org/) creado usando el comando [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+La finalidad del proyecto es aprender a manejar el Framework Next.js, y como integrarle otras dependencias.
 
-First, run the development server:
+## Dependencias que posee
+
+El proyecto tiene las siguientes dependendencias:
+
+- [TailWind CSS](https://tailwindcss.com/) - Para estilos CSS
+- [Chart.js](https://www.chartjs.org/) - Para añadir y manejar Graficas
+
+## Como Iniciar el Programa
+
+Una vez descargado, corra alguno de los siguientes comandos para iniciarlo:
 
 ```bash
 npm run dev
@@ -12,23 +22,21 @@ yarn dev
 pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000) con algun navegador web.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Para realizar cambios al proyecto ocupa entrar a la carpeta `app`. Adentro estan los archivos de paginas y componentes
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Aprenda Mas
 
-## Learn More
+Para aprender mas sobre Next.js, checa las siguientes documentaciones:
 
-To learn more about Next.js, take a look at the following resources:
+- [Next.js Documentation](https://nextjs.org/docs) - Aprenda mas sobre Next.js.
+- [Learn Next.js](https://nextjs.org/learn) - Tutorial Interactivo sobre Next.js.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Puede checar el repositorio GitHub [the Next.js GitHub repository](https://github.com/vercel/next.js/) - cualquier comentario es bienvenido
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Despliegue en Vercel
 
-## Deploy on Vercel
+La forma mas rapida de deplegar su proyecto es usar [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) de los creadores de Next.js
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Cheque nuestra [Next.js deployment documentation](https://nextjs.org/docs/deployment) para mas detalles.

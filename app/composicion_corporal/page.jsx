@@ -21,15 +21,15 @@ export default function Composition() {
   const [suprailiac, setSuprailiac] = useState('');
   const [bistyloid, setBistyloid] = useState('');
   const [femur, setFemur] = useState('');
-  const [density, setDensity] = useState(null);
-  const [result, setResult] = useState(null); //porcentaje masa grasa
-  const [result_kg, setResult_kg] = useState(null); //masa grasa
-  const [bone_mass, setBone_mass] = useState(null); //masa osea
-  const [residual_mass, setResidual_mass] = useState(null); // masa residual
-  const [por_bone_mass, setPor_bone_mass] = useState(null); //porcentaje masa osea
-  const [por_residual_mass, setPor_residual_mass] = useState(null); //porcentaje masa residual
-  const [composition, setComposition] = useState(null); //masa muscular
-  const [por_composition, setPor_composition] = useState(null); //porcentaje masa muscualar
+  const [density, setDensity] = useState('');
+  const [result, setResult] = useState(''); //porcentaje masa grasa
+  const [result_kg, setResult_kg] = useState(''); //masa grasa
+  const [bone_mass, setBone_mass] = useState(''); //masa osea
+  const [residual_mass, setResidual_mass] = useState(''); // masa residual
+  const [por_bone_mass, setPor_bone_mass] = useState(''); //porcentaje masa osea
+  const [por_residual_mass, setPor_residual_mass] = useState(''); //porcentaje masa residual
+  const [composition, setComposition] = useState(''); //masa muscular
+  const [por_composition, setPor_composition] = useState(''); //porcentaje masa muscualar
   const [error, setError] = useState(false);
 
 
@@ -89,10 +89,10 @@ export default function Composition() {
 
     } else {
       console.log('Error');
-      setResult(null);
-      setDensity(null);
-      setBone_mass(null);
-      setResidual_mass(null);
+      setResult("");
+      setDensity("");
+      setBone_mass("");
+      setResidual_mass("");
       setError(true);
       return;
     }
@@ -229,7 +229,7 @@ export default function Composition() {
             setHeight("");
             setWeight("");
             setAge("");
-            setResult(null);
+            setResult("");
           }}
         >
           Limpiar Campos
