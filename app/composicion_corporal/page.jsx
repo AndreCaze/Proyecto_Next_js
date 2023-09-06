@@ -1,7 +1,7 @@
 "use client";
 import { Kanit, Lato } from 'next/font/google'
 import React, { useState } from "react";
-import Table from '../table/page';
+import Table from '../../components/Table';
 import PieChart from '@/components/PieChart';
 import BarChart from '@/components/BarChart';
 
