@@ -2,9 +2,11 @@ import { Kanit, Lato } from 'next/font/google'
 import Profile from "../assets/foto2.png";
 import Image from 'next/image';
 
+//Variables of the imported Google Fonts
 const kanit = Kanit({ subsets: ['latin'], weight: ["500"], style: ["italic"] });
 const lato = Lato({subsets: ['latin'], weight: ["700"], style: ["normal"] });
 
+//About Page Template
 export default (About) =>{
     return (
         <div className="bg-primary flex items-center justify-center h-screen w-full md:h-screen overflow-y-scroll">

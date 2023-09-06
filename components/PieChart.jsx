@@ -1,61 +1,61 @@
 import Chart from 'chart.js/auto'
 import { useEffect, useRef } from "react"
+import ChartDataLabels from "chartjs-plugin-datalabels";
 
-export default function PieChart({
-    result,
-    por_bone_mass,
-    por_residual_mass,
-    por_composition
-}) {
+//PieChart Component
+export default function PieChart({ percentages }) {
   const chartRef = useRef(null);
-    useEffect(()=>{
-            const char = document.getElementById('cake');
 
-            if(chartRef.current){
-              chartRef.current.destroy();
-            }
+  useEffect(() => {
+    //Data to use in the Chart
+    const { fat_mass, bone_mass, residual_mass, muscular_mass } = percentages;
 
+    const ctx = document.getElementById("myChart");
 
-            const left = new Chart(char, {
-            type: 'pie',
-            data: {
-              labels: ['Masa Grasa','Masa Osea','Masa Residual','Masa Muscular'],
-              datasets: [{
-                data: [result, por_bone_mass, por_residual_mass, por_composition],
-                    label: "%",
-                    borderWidth: 2
-                }]
-            },
-            options: {
-              scales: {
-                y: {
-                  beginAtZero: true
-                }
-              },
-              plugins: {
-                  legend: {
-                    labels: {
-                      font: {
-                        size: 24
-                      }
-                    }
-                  }
-                }
-            }
-          });
+    //Method to destroy current chart
+    if (chartRef.current) {
+      chartRef.current.destroy();
+    }
 
+    //Declaration of the Chart
+    const newChart = new Chart(ctx, {
+      type: "pie",
+      data: {
+        labels: ["Masa grasa", "Masa ósea", "Masa residual", "Masa muscular"],
+        datasets: [
+          {
+            label: "%",
+            data: [
+              fat_mass.toFixed(2),
+              bone_mass.toFixed(2),
+              residual_mass.toFixed(2),
+              muscular_mass.toFixed(2),
+            ],
+            backgroundColor: ["#ffecc1", "#96e5ff", "#b8f7e6", "#f3c9d3"],
+            borderColor: ["#ffd166", "#118ab2", "#06d6a0", "#ef476f"],
+            borderWidth: 2,
+            hoverOffset: 15,
+          },
+        ],
+      },
+      plugins: [ChartDataLabels],
+      options: {
+        plugins: {
+          datalabels: {
+            font: "bold",
+            formatter: (value) => value + "%",
+          },
+        },
+      },
+    });
 
-          chartRef.current = left;
+    //Replacement of the Chart
+    chartRef.current = newChart;
+  }, [percentages]);
 
-        },[result,
-          por_bone_mass,
-          por_residual_mass,
-          por_composition])
-    
-
-    return (
-            <div className='border border-gray-400 pt-0 rounded-xl  w-full h-fit my-auto  shadow-xl'>
-                <canvas id='cake'></canvas>
-            </div>
-    );
+  return (
+    <div className='border border-gray-400 pt-0 rounded-xl w-full h-fit my-auto  shadow-xl'>
+      <canvas id="myChart"></canvas>
+    </div>
+  );
 }

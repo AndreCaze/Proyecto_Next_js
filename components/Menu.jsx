@@ -1,5 +1,6 @@
 import Link from "next/link"
 
+//Object with the Routes
 const menuRoutes = [
     {
         rute: '/',
@@ -16,6 +17,7 @@ const menuRoutes = [
 
 ];
 
+//Menu Bar template
 function Menu() {
     return (
         <div className=" w-[200px] w[30%] bg-menu h-screen">
