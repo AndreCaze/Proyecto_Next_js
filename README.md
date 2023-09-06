@@ -30,13 +30,13 @@ Para realizar cambios al proyecto ocupa entrar a la carpeta `app`. Adentro estan
 
 Para aprender mas sobre Next.js, checa las siguientes documentaciones:
 
-- [Next.js Documentation](https://nextjs.org/docs) - Aprenda mas sobre Next.js.
-- [Learn Next.js](https://nextjs.org/learn) - Tutorial Interactivo sobre Next.js.
+- [Documentacion Next.js](https://nextjs.org/docs) - Aprenda mas sobre Next.js.
+- [Aprenda Next.js](https://nextjs.org/learn) - Tutorial Interactivo sobre Next.js.
 
 Puede checar el repositorio GitHub [the Next.js GitHub repository](https://github.com/vercel/next.js/) - cualquier comentario es bienvenido
 
 ## Despliegue en Vercel
 
-La forma mas rapida de deplegar su proyecto es usar [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) de los creadores de Next.js
+La forma mas rapida de deplegar su proyecto es usar la [Plataforma Vercel](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) de los creadores de Next.js
 
-Cheque nuestra [Next.js deployment documentation](https://nextjs.org/docs/deployment) para mas detalles.
+Cheque nuestra [Documentacion de Despliegue Next.js](https://nextjs.org/docs/deployment) para mas detalles.
